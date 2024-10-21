@@ -1,56 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoteInformer - Coming Soon!</title>
+    <title>VoteInformer</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 70px;
             background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
             color: #333;
+            scroll-behavior: smooth;
         }
 
-        h1 {
-            font-size: 48px;
+        nav {
+            width: 100%;
+            background: #000;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            text-align: center;
+            padding: 15px 20px;
+            width: 100%;
+            max-width: 800px;
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
+        .content h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background: #333;
+        }
+
+        .community-container {
+            margin: 20px 0;
+        }
+
+        .community-container p {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 0 20px;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.5;
+            scroll-margin-top: 80px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+        }
+
+        .section ul {
+            text-align: left;
+            list-style: disc inside;
+            padding-left: 20px;
+            margin: 15px 0;
         }
 
         footer {
-            position: absolute;
-            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 20px 10px;
+            width: 100%;
             text-align: center;
-            font-size: 14px;
+            margin-top: auto;
+            font-size: 1em;
         }
 
         footer a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
+            margin: 0 10px;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 1em;
+            line-height: 1.5;
+            padding: 15px 20px;
+            max-width: 800px;
+            margin-bottom: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .buttons-container {
+                flex-direction: row;
+            }
+
+            .content h1 {
+                font-size: 3em;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h1>Coming Soon!</h1>
-    <p>VoteInformer is on the way. Stay tuned for updates!</p>
+    <nav>
+        <ul>
+            <li><a href="#what-is">What is VoteInformer?</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>VoteInformer</h1>
+    </div>
+
+    <div class="buttons-container">
+        <a href="https://voteinformer-us.web.app" class="button">Try VoteInformer: USA</a>
+        <a href="https://voteinformer.ca" class="button">Try VoteInformer: Canada</a>
+    </div>
+
+    <div class="section" id="what-is">
+        <h2>What is VoteInformer?</h2>
+        <p>VoteInformer is a civic engagement app that connects citizens with information they need to participate meaningfully in the political process. Our app invites you to vote on the same topics that the government has already decided on, offering a clear comparison of how your views align with those of political parties. Whether you’re exploring how parties align with your values, reviewing easy-to-understand legislative summaries, or analyzing your voting profile, VoteInformer makes navigating the political landscape more approachable and allows you to explore dynamic insights through interactive tools. We aim to support informed decision-making and make political engagement not only more accessible but also enjoyable. Our alpha versions are currently available for both Canada and the United States, and are designed to deepen your understanding of how your values map onto the political landscape.</p>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:support@baye.ca">support@baye.ca</a></p>
+        <p>Baye's website: <a href="https://www.baye.ca">baye.ca</a></p>
+        <p>Address: 1800 Argyle St Unit 801, Halifax, NS B3J 3N8</p>
+    </div>
+
+    <div class="disclaimer" id="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>Baye Labs Inc. provides tools to help users better understand complex topics but does not offer legal advice. Our tools and insights are non-partisan and designed for entertainment purposes only. We link directly to original sources for transparency, and users should refer to these sources for verification. For any legal or professional advice, please consult a qualified expert.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2024 VoteInformer | <a href="https://baye.ca" target="_blank">baye.ca</a></p>
+        <p><a href="https://baye.ca/docs/legal/privacy_policy">Privacy Policy</a> |
+            <a href="https://baye.ca/docs/legal/terms_of_service">Terms of Service</a> |
+            <a href="https://www.instagram.com/explorewithbaye">
+                <img src="images/Instagram_Glyph_White.png" alt="Instagram" style="width:24px; height:24px; vertical-align:middle;">
+            </a>
+        </p>
     </footer>
 </body>
+
 </html>
